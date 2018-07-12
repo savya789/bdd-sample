@@ -1,0 +1,77 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Test cases to Login to the Site",
+        "description": "",
+        "id": "free-crm-login-page;test-cases-to-login-to-the-site",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepdefinition.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "Get the title of the login page",
+            "match": {
+              "location": "LoginStepdefinition.get_the_title_of_the_login_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user enters username and password",
+            "match": {
+              "location": "LoginStepdefinition.user_enters_username_and_password()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user clicks login button",
+            "match": {
+              "location": "LoginStepdefinition.user_clicks_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Get the title of the Home page",
+            "match": {
+              "location": "LoginStepdefinition.get_the_title_of_the_Home_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Free CRM login Page",
+    "description": "",
+    "id": "free-crm-login-page",
+    "keyword": "Feature",
+    "uri": "/Users/praveengaddam/Test1/src/main/java/Features/freecrmlogin.feature"
+  }
+]
