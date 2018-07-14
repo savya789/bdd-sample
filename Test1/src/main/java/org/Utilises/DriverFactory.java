@@ -9,6 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
 
@@ -33,7 +34,7 @@ public class DriverFactory {
 
         } else if (drivername.equalsIgnoreCase("IE")) {
 
-            System.setProperty("webdriver.chrome.driver", "/Users/praveengaddam/Downloads/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "/Users/praveengaddam/Downloads/InternetExplorer");
             return new InternetExplorerDriver();
         } else {
 
