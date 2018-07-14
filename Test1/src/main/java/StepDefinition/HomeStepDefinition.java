@@ -10,16 +10,16 @@ import org.openqa.selenium.WebDriver;
 
     public class HomeStepDefinition {
 
-        WebDriver driver = DriverFactory.setDriver("chrome");
-        Loginpage login = new Loginpage(driver);
-        HomePage homepage = new HomePage(driver);
+        WebDriver driver ;
 
 
         @Given("^userx is on the login page$")
         public void users_is_on_the_login_page() throws Throwable {
-
+            Loginpage login = new Loginpage();
             System.out.println("In login ");
-            Loginpage.Launchurl(driver);
+            driver = DriverFactory.setDriver("chrome");
+            DriverFactory.getDriver();
+            login.Launchurl(driver);
 
         }
 
@@ -27,26 +27,24 @@ import org.openqa.selenium.WebDriver;
         public void users_enters_Username_and_password(String user,String pwd) throws Throwable {
             System.out.println(user);
             System.out.println(pwd);
-
+            HomePage homepage = new HomePage();
             homepage.enterusernpwd(user,pwd);
-
-
 
         }
 
         @Then("^users clicks login button$")
         public void userw_clicks_login_button() throws Throwable {
+            HomePage homepage = new HomePage();
 
             System.out.println("In login button ");
-
-
-            homepage.clickonlogin();
+             homepage.clickonlogin();
 
         }
 
         @Then("^user clicks on deals$")
         public void user_clicks_on_deals() throws Throwable {
             System.out.println("In deals click");
+            HomePage homepage = new HomePage();
             homepage.clickonDeals(driver);
 
         }

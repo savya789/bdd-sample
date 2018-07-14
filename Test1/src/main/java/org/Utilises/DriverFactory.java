@@ -14,33 +14,40 @@ import java.util.concurrent.TimeUnit;
 public class DriverFactory {
 
 
-    WebDriver driver;
+    public static WebDriver driver;
 
-    public static WebDriver setDriver(String drivername) {
-
-        WebDriver driver;
-
+    public  static WebDriver setDriver(String drivername) {
 
         if (drivername.equalsIgnoreCase("chrome")) {
 
             System.setProperty("webdriver.chrome.driver", "/Users/praveengaddam/Downloads/chromedriver");
-            return new ChromeDriver();
+            driver = new ChromeDriver();
+
 
         } else if (drivername.equalsIgnoreCase("FF")) {
 
             System.setProperty("webdriver.chrome.driver", "/Users/praveengaddam/Downloads/gecodriver");
-            return new FirefoxDriver();
+            driver = new FirefoxDriver();
 
 
         } else if (drivername.equalsIgnoreCase("IE")) {
 
             System.setProperty("webdriver.chrome.driver", "/Users/praveengaddam/Downloads/InternetExplorer");
-            return new InternetExplorerDriver();
+            driver = new InternetExplorerDriver();
         } else {
 
             System.setProperty("webdriver.chrome.driver", "/Users/praveengaddam/Downloads/chromedriver");
-            return new ChromeDriver();
+            driver = new ChromeDriver();
         }
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        driver.manage().deleteAllCookies();
+        driver.manage().window().maximize();
+        return driver;
+    }
+
+    public static WebDriver getDriver(){
+
+        return driver;
     }
 
 

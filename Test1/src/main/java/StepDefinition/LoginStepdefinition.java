@@ -11,7 +11,8 @@ import org.openqa.selenium.WebDriver;
 public class LoginStepdefinition {
 
     WebDriver driver = DriverFactory.setDriver("chrome");
-    Loginpage login = new Loginpage(driver);
+
+    Loginpage login = new Loginpage();
 
 
     @Given("^user is on the login page$")
@@ -54,8 +55,6 @@ public class LoginStepdefinition {
     public void user_clicks_login_button() throws Throwable {
 
             System.out.println("In login button ");
-
-
             login.clickonlogin();
 
     }
@@ -64,7 +63,6 @@ public class LoginStepdefinition {
     public void get_the_title_of_the_Home_page() throws Throwable {
 
             System.out.println("title of home page");
-
             Assert.assertEquals("CRMPRO", login.gethomepagetitle(driver));
             driver.close();
 

@@ -1,13 +1,15 @@
 package LogicDerived;
 
+import Panels.HeaderMainpanel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.Utilises.DriverFactory;
 
-import java.util.concurrent.TimeUnit;
 
-public class HomePage {
+
+public class HomePage extends DriverFactory  {
 
 
 
@@ -17,18 +19,15 @@ public class HomePage {
     @FindBy(name="password")
     WebElement password;
 
-    @FindBy(xpath="//input[@type='submit']")
+    @FindBy(xpath="//input[@value='Login']")
     WebElement loginbutton;
 
-    @FindBy(xpath="//a[contains(text(),'Deals')]")
-    WebElement dealslink;
 
-    public HomePage(WebDriver driver){
+    public HomePage(){
+
         PageFactory.initElements(driver,this);
 
     }
-
-
 
     public void enterusernpwd(String user,String pwd)throws NullPointerException{
 
@@ -37,17 +36,19 @@ public class HomePage {
         username.sendKeys(user);
         password.sendKeys(pwd);
 
-
     }
 
     public void clickonlogin()throws NullPointerException{
+        System.out.println("In login button ");
         loginbutton.click();
+
     }
 
     public void clickonDeals(WebDriver driver) throws NullPointerException{
-
-        driver.switchTo().frame("leftpanel");
-        dealslink.click();
+        HeaderMainpanel mainpanel = new HeaderMainpanel();
+        driver.switchTo().frame("mainpanel");
+        System.out.println("In click on deals mthd");
+        mainpanel.getdealslink().click();
 
     }
 }

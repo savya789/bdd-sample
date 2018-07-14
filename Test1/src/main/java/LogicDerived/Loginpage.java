@@ -11,7 +11,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class Loginpage {
+public class Loginpage extends DriverFactory{
 
     // public static Properties prop ;
 
@@ -25,13 +25,10 @@ public class Loginpage {
     WebElement password;
 
 
-   public Loginpage(WebDriver driver){
+   public Loginpage(){
 
        //used to initalize all variables
        PageFactory.initElements(driver,this);
-       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       driver.manage().deleteAllCookies();
-       driver.manage().window().maximize();
 
 //       try {
 //
