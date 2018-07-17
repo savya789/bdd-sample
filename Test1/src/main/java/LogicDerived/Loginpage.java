@@ -15,7 +15,7 @@ public class Loginpage extends DriverFactory{
 
     // public static Properties prop ;
 
-    @FindBy(xpath="//input[@type='submit']")
+    @FindBy(xpath="//input[@value='Login']")
     WebElement loginbutton;
 
     @FindBy(name="username")

@@ -1,5 +1,6 @@
 Feature: Move to Deals page
 
+
 Scenario Outline: Test case to move from Home page to Deals
 
   Given userx is on the login page

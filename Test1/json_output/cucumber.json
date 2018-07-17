@@ -3,82 +3,80 @@
     "line": 1,
     "elements": [
       {
-        "line": 13,
-        "name": "Test case to move from Home page to Deals",
+        "line": 4,
+        "name": "Test cases to Login to the Site",
         "description": "",
-        "id": "move-to-deals-page;test-case-to-move-from-home-page-to-deals;;2",
+        "id": "free-crm-login-page;test-cases-to-login-to-the-site",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 8785128137,
+              "duration": 7599066101,
               "status": "passed"
             },
-            "line": 5,
-            "name": "userx is on the login page",
+            "line": 6,
+            "name": "user is on the login page",
             "match": {
-              "location": "HomeStepDefinition.users_is_on_the_login_page()"
+              "location": "LoginStepdefinition.user_is_on_the_login_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1273617939,
+              "duration": 95575950,
               "status": "passed"
             },
-            "line": 6,
-            "name": "users enters \"savyamaddineni\" and \"Welcome@1\"",
+            "line": 8,
+            "name": "Get the title of the login page",
             "match": {
-              "arguments": [
-                {
-                  "val": "savyamaddineni",
-                  "offset": 14
-                },
-                {
-                  "val": "Welcome@1",
-                  "offset": 35
-                }
-              ],
-              "location": "HomeStepDefinition.users_enters_Username_and_password(String,String)"
+              "location": "LoginStepdefinition.get_the_title_of_the_login_page()"
             },
-            "matchedColumns": [
-              0,
-              1
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 5334576252,
+              "duration": 720497394,
               "status": "passed"
             },
-            "line": 7,
-            "name": "users clicks login button",
+            "line": 9,
+            "name": "user enters username and password",
             "match": {
-              "location": "HomeStepDefinition.userw_clicks_login_button()"
+              "location": "LoginStepdefinition.user_enters_username_and_password()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 891818306,
+              "duration": 7328086587,
               "status": "passed"
             },
-            "line": 8,
-            "name": "user clicks on deals",
+            "line": 10,
+            "name": "user clicks login button",
             "match": {
-              "location": "HomeStepDefinition.user_clicks_on_deals()"
+              "location": "LoginStepdefinition.user_clicks_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 212558010,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Get the title of the Home page",
+            "match": {
+              "location": "LoginStepdefinition.get_the_title_of_the_Home_page()"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Move to Deals page",
+    "name": "Free CRM login Page",
     "description": "",
-    "id": "move-to-deals-page",
+    "id": "free-crm-login-page",
     "keyword": "Feature",
-    "uri": "/Users/praveengaddam/bdd-sample/Test1/src/main/java/Features/homepage.feature"
+    "uri": "/Users/praveengaddam/bdd-sample/Test1/src/test/java/Features/freecrmlogin.feature"
   }
 ]

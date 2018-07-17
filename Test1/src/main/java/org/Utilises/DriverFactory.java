@@ -40,6 +40,7 @@ public class DriverFactory {
             driver = new ChromeDriver();
         }
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        System.out.println("In cokkied");
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         return driver;

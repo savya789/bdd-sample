@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="16.285141">
-<testcase classname="Move to Deals page" name="Test case to move from Home page to Deals" time="16.285141">
-<system-out><![CDATA[Given userx is on the login page............................................passed
-When users enters "savyamaddineni" and "Welcome@1"..........................passed
-Then users clicks login button..............................................passed
-Then user clicks on deals...................................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="15.955784">
+<testcase classname="Free CRM login Page" name="Test cases to Login to the Site" time="15.955784">
+<system-out><![CDATA[Given user is on the login page.............................................passed
+When Get the title of the login page........................................passed
+Then user enters username and password......................................passed
+Then user clicks login button...............................................passed
+Then Get the title of the Home page.........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

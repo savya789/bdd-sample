@@ -1,132 +1,77 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("/Users/praveengaddam/bdd-sample/Test1/src/main/java/Features/homepage.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("/Users/praveengaddam/bdd-sample/Test1/src/test/java/Features/freecrmlogin.feature");
 formatter.feature({
   "line": 1,
-  "name": "Move to Deals page",
+  "name": "Free CRM login Page",
   "description": "",
-  "id": "move-to-deals-page",
+  "id": "free-crm-login-page",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "line": 3,
-  "name": "Test case to move from Home page to Deals",
-  "description": "",
-  "id": "move-to-deals-page;test-case-to-move-from-home-page-to-deals",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 5,
-  "name": "userx is on the login page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "users enters \"\u003cUsername\u003e\" and \"\u003cpassword\u003e\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "users clicks login button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "user clicks on deals",
-  "keyword": "Then "
-});
-formatter.examples({
-  "line": 11,
-  "name": "",
-  "description": "",
-  "id": "move-to-deals-page;test-case-to-move-from-home-page-to-deals;",
-  "rows": [
-    {
-      "cells": [
-        "Username",
-        "password"
-      ],
-      "line": 12,
-      "id": "move-to-deals-page;test-case-to-move-from-home-page-to-deals;;1"
-    },
-    {
-      "cells": [
-        "savyamaddineni",
-        "Welcome@1"
-      ],
-      "line": 13,
-      "id": "move-to-deals-page;test-case-to-move-from-home-page-to-deals;;2"
-    }
-  ],
-  "keyword": "Examples"
-});
 formatter.scenario({
-  "line": 13,
-  "name": "Test case to move from Home page to Deals",
+  "line": 4,
+  "name": "Test cases to Login to the Site",
   "description": "",
-  "id": "move-to-deals-page;test-case-to-move-from-home-page-to-deals;;2",
+  "id": "free-crm-login-page;test-cases-to-login-to-the-site",
   "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 5,
-  "name": "userx is on the login page",
-  "keyword": "Given "
+  "keyword": "Scenario"
 });
 formatter.step({
   "line": 6,
-  "name": "users enters \"savyamaddineni\" and \"Welcome@1\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "users clicks login button",
-  "keyword": "Then "
+  "name": "user is on the login page",
+  "keyword": "Given "
 });
 formatter.step({
   "line": 8,
-  "name": "user clicks on deals",
+  "name": "Get the title of the login page",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 9,
+  "name": "user enters username and password",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 10,
+  "name": "user clicks login button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 11,
+  "name": "Get the title of the Home page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "HomeStepDefinition.users_is_on_the_login_page()"
+  "location": "LoginStepdefinition.user_is_on_the_login_page()"
 });
 formatter.result({
-  "duration": 8785128137,
+  "duration": 7599066101,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "savyamaddineni",
-      "offset": 14
-    },
-    {
-      "val": "Welcome@1",
-      "offset": 35
-    }
-  ],
-  "location": "HomeStepDefinition.users_enters_Username_and_password(String,String)"
+  "location": "LoginStepdefinition.get_the_title_of_the_login_page()"
 });
 formatter.result({
-  "duration": 1273617939,
+  "duration": 95575950,
   "status": "passed"
 });
 formatter.match({
-  "location": "HomeStepDefinition.userw_clicks_login_button()"
+  "location": "LoginStepdefinition.user_enters_username_and_password()"
 });
 formatter.result({
-  "duration": 5334576252,
+  "duration": 720497394,
   "status": "passed"
 });
 formatter.match({
-  "location": "HomeStepDefinition.user_clicks_on_deals()"
+  "location": "LoginStepdefinition.user_clicks_login_button()"
 });
 formatter.result({
-  "duration": 891818306,
+  "duration": 7328086587,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepdefinition.get_the_title_of_the_Home_page()"
+});
+formatter.result({
+  "duration": 212558010,
   "status": "passed"
 });
 });
